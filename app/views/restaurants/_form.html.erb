@@ -1,0 +1,33 @@
+<!-- <%#= form_for @pet do |f| %>
+    <div class="form-group">
+      <%#= f.label :name %>
+      <%#= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.label :address %>
+      <%#= f.text_field :address, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.label :species %>
+      <%#= f.select :species, collection: Pet::SPECIES, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.label :found_on %>
+      <%#= f.date_field :found_on, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.submit class: "btn btn-primary" %>
+    </div>
+  <%# end %> -->
+
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: Restaurant::CATEGORY %>
+    <%= f.input :phone_number %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>

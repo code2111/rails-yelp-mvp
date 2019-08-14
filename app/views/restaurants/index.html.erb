@@ -1,12 +1,6 @@
 <h1>Here are all the restaurants:</h1>
-<div class="container">
-<ul>
-  <div class></div>
-  <li><% @restaurants.each do |restaurant| %></li>
-  <li><%= restaurant.name %></li>
-  <li><%= restaurant.address %></li>
-  <li><%= restaurant.category %></li>
-  <li><%= restaurant.phone_number %></li>
-  <% end %>
-</ul>
-</div>
+  <ol>
+    <% @restaurants.each do |restaurant| %>
+    <li><%= restaurant.name %> - Category <%= restaurant.category.capitalize %></li>
+    <% end %>
+  </ol>
